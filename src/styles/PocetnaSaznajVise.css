@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    background-image: url(../assets/laptop.jpg);
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+}
+.oFirmi {
+    padding: 3em;
+    width: 100vw;
+}
+.oFirmi p {
+    padding-top: 5em;
+    
+}
+.container-text {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 80px 40px;
+}
+
+.container-text h1{
+    text-align: center;
+}
+
+.kraj{
+    font-family: cursive;
+}
+
+.div-copy{
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2em;
+}
+.naslov{
+    font-size: 60px;
+}
+.FrontPageSection{
+    display: inline-flex;
+    align-items: center;
+    max-width: 1200px;
+    text-align: left;
+}
+.Image{
+    max-width: 100%;
+    display: block;
+    border-radius: 30px;
+}
+.Spacer{
+    width: 90px;
+}
+.Text{
+    flex: 1;
+    color: white;
+}
+.FrontPageSection .Text p{
+    line-height: 26px;
+    margin-bottom: 0;
+}

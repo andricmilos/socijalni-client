@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.centriranTekst{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.centriranTekst button{
+    height: 2.4vw;
+    width: 8vw;
+    font-weight: 600;
+    font-size: 12pt;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 300ms;
+}
+.centriranTekst button:hover{
+    height: 2.4vw;
+    width: 8vw;
+    font-weight: 600;
+    font-size: 12pt;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(171, 171, 171);
+    color: black;
+    cursor: pointer;
+}
+.navbar{
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    transition: 300ms;
+}
+.centriranTekst a{
+    text-decoration: none;
+    color: black;
+}
+.navbarScroll{
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    transition: 300ms;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+.div1{
+    display: flex;
+    padding-left: 3vw;
+}
+.div1 h2{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2em;
+    padding-left: 0.5em;
+    padding-top: 0.1em;
+}
+.div2{
+    display: flex;
+    height: auto;
+    padding-top: 0.1em;
+}
+.div2 a{
+    margin-right: 3em;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
+.div2 a:hover{
+    margin-right: 3em;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    color: gray;
+}
+.white{
+    height: 20vh;
+    width: 100vw;
+    background-color: black;
+}
+.belaBoja{
+    color: white;
+}
+.logo{
+    height: 40px;
+}
