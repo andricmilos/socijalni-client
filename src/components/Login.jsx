@@ -11,7 +11,7 @@ export default function Login(){
             <div className="title">
                 IT-gram
                 <span>
-                    Sign in
+                    Login
                 </span>
             </div>
             <div className="sign-in-basic">
@@ -36,7 +36,7 @@ export default function Login(){
                 </div>
                 <div className="landing-form-actions">
                     <div className="btn-medium">
-                        Sign in
+                        Login
                         <div className="inline-loader"></div>
                     </div>
                 </div>
