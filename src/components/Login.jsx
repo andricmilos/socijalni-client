@@ -2,6 +2,7 @@ import "../styles/Login.css"
 import Image from "../assets/pozadinaNova.png"
 import Image2 from "../assets/account.png"
 import Image3 from "../assets/key.png"
+import {Link} from "react-router-dom"
 export default function Login(){
     return(<>
         <div className="pozadina">
@@ -36,7 +37,7 @@ export default function Login(){
                 </div>
                 <div className="landing-form-actions">
                     <div className="btn-medium">
-                        Login
+                        <Link to="/log">Login</Link>
                         <div className="inline-loader"></div>
                     </div>
                 </div>

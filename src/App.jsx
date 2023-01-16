@@ -9,6 +9,7 @@ import NeocekivanaGreska from './components/NeocekivanaGreska';
 import ResetPassword from './components/ResetPassword';
 import ConfirmResetPassword from './components/ConfirmResetPassword'
 import ConfirmRegistration from './components/ConfirmRegistration';
+import HomePage from './components/HomePage';
 function App() {
   return (<>
       <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
               <PocetnaStranica />
             </>}>
           </Route>
+          <Route path="/log" element={<HomePage />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>
