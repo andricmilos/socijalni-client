@@ -1,11 +1,9 @@
 import "../styles/ResetPassword.css"
-import Image from "../assets/pozadinaNova.png"
-import Image3 from "../assets/key.png"
 
 export default function ConfirmResetPassword(){
     return(<>
         <div className="pozadina">
-            <img src={Image} alt="" />
+            <img src="../assets/pozadinaNova.png" alt="" />
         </div>
         <div className="landing-form">
             <div className="title">
@@ -20,7 +18,7 @@ export default function ConfirmResetPassword(){
                     <div className="input-wrapper">
                         <input type="password" name="password" placeholder="Password"  />
                         <div className="input-pre">
-                            <img src={Image3} alt="" />
+                            <img src="../assets/key.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -30,7 +28,7 @@ export default function ConfirmResetPassword(){
                     <div className="input-wrapper">
                         <input type="password" name="password" placeholder="Password"  />
                         <div className="input-pre">
-                            <img src={Image3} alt="" />
+                            <img src="../assets/key.png" alt="" />
                         </div>
                     </div>
                 </div>

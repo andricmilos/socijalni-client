@@ -1,13 +1,9 @@
 import "../styles/SignUp.css"
-import Image from "../assets/pozadinaNova.png"
-import Image2 from "../assets/account.png"
-import Image3 from "../assets/key.png"
-import Image4 from "../assets/calendar.png"
 
 export default function Login(){
     return(<>
         <div className="pozadina">
-            <img src={Image} alt="" />
+            <img src="../assets/pozadinaNova.png" alt="" />
         </div>
         <div className="landing-form">
             <div className="title">
@@ -21,7 +17,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="text" name="ime" placeholder="Name"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -31,7 +27,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="text" name="prezime" placeholder="Surname"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -41,7 +37,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="text" name="username" placeholder="Username"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -51,7 +47,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="email" name="email" placeholder="Email"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -61,7 +57,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="date" name="datum_rodjenja" />
                         <div className="input-pre">
-                            <img src={Image4} alt="" />
+                            <img src="../assets/calendar.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -71,7 +67,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="password" name="password" placeholder="Password"  />
                         <div className="input-pre">
-                            <img src={Image3} alt="" />
+                            <img src="../assets/key.png" alt="" />
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,9 @@
 import "../styles/ResetPassword.css"
-import Image from "../assets/pozadinaNova.png"
-import Image2 from "../assets/account.png"
 
 export default function ResetPassword(){
     return(<>
         <div className="pozadina">
-            <img src={Image} alt="" />
+            <img src="../assets/pozadinaNova.png" alt="" />
         </div>
         <div className="landing-form">
             <div className="title">
@@ -20,7 +18,7 @@ export default function ResetPassword(){
                     <div className="input-wrapper">
                         <input type="email" name="email" placeholder="Email"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import "../styles/PocetnaSaznajVise.css"
-import Image from "../assets/logo.png"
+
 export default function PocetnaSaznajVise(){
     return(<>
         <div className="container">
@@ -21,7 +21,7 @@ export default function PocetnaSaznajVise(){
             <div className="container-text">
                 <div className="FrontPageSection">
                     <div className="Image">
-                        <img src={Image} alt="" />
+                        <img src="../assets/logo.png" alt="" />
                     </div>
                     <div className="Spacer"></div>
                     <div className="Text">

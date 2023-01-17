@@ -1,12 +1,9 @@
 import "../styles/Login.css"
-import Image from "../assets/pozadinaNova.png"
-import Image2 from "../assets/account.png"
-import Image3 from "../assets/key.png"
 import {Link} from "react-router-dom"
 export default function Login(){
     return(<>
         <div className="pozadina">
-            <img src={Image} alt="" />
+            <img src="../assets/pozadinaNova.png" alt="" />
         </div>
         <div className="landing-form">
             <div className="title">
@@ -20,7 +17,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="text" name="username" placeholder="Username or email"  />
                         <div className="input-pre">
-                            <img src={Image2} alt="" />
+                            <img src="../assets/account.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -30,7 +27,7 @@ export default function Login(){
                     <div className="input-wrapper">
                         <input type="password" name="password" placeholder="Password"  />
                         <div className="input-pre">
-                            <img src={Image3} alt="" />
+                            <img src="../assets/key.png" alt="" />
                         </div>
                     </div>
                     <div className="text-button">Forgotten your password?</div>

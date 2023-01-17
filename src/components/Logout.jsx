@@ -1,10 +1,9 @@
 import "../styles/Login.css"
-import Image from "../assets/pozadinaNova.png"
 
 export default function Logout(){
     return(<>
         <div className="pozadina">
-            <img src={Image} alt="" />
+            <img src="../assets/pozadinaNova.png" alt="" />
         </div>
         <div className="landing-form">
             <div className="title">
