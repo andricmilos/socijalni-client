@@ -5,7 +5,6 @@ export default function validateLogin() {
         if (response.url != url) {
           window.location.href = "/login";
         }
-  
       })
       .catch((error) => {
         console.error(error)

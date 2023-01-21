@@ -12,6 +12,7 @@ export default function Login(){
                     Login
                 </span>
             </div>
+            <form method='POST' action='http://localhost:8080/login'>
             <div className="sign-in-basic">
                 <div className="landing-form-row">
                     <div className="input-wrapper">
@@ -33,12 +34,10 @@ export default function Login(){
                     <div className="text-button">Forgotten your password?</div>
                 </div>
                 <div className="landing-form-actions">
-                    <div className="btn-medium">
-                        <Link to="/log">Login</Link>
-                        <div className="inline-loader"></div>
-                    </div>
+                    <button className="btn-medium" type="submit">Login</button>
                 </div>
             </div>
+            </form>
         </div>
     </>)
 }

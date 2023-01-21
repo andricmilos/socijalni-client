@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 const Layout = () => {
     const location = useLocation();
     if (location.pathname != '/login') {
-        //validateLogin();
+        validateLogin();
     }
     return (<>
         <Outlet />
