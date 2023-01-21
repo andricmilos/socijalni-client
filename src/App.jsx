@@ -1,4 +1,5 @@
 import './App.css'
+import Layout from './components/Layout';
 import Navigation from "./components/Navigation"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PocetnaStranica from './components/PocetnaStranica'
@@ -10,16 +11,17 @@ import ResetPassword from './components/ResetPassword';
 import ConfirmResetPassword from './components/ConfirmResetPassword'
 import ConfirmRegistration from './components/ConfirmRegistration';
 import HomePage from './components/HomePage';
+
 function App() {
   return (<>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<>
+          <Route path="/" element={<Layout />}>
+          <Route index element={<>
               <Navigation />
               <PocetnaStranica />
-            </>}>
-          </Route>
-          <Route path="/log" element={<HomePage />}></Route>
+            </>} />
+            <Route path="/log" element={<HomePage />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>
@@ -27,6 +29,7 @@ function App() {
           <Route path="/resetpassword" element={<ResetPassword />}></Route>
           <Route path="/confirmresetpassword" element={<ConfirmResetPassword />}></Route>
           <Route path="/confirmregistration" element={<ConfirmRegistration />}></Route>
+        </Route>
         </Routes>
       </BrowserRouter>
     </>
@@ -34,3 +37,4 @@ function App() {
 }
 
 export default App
+
