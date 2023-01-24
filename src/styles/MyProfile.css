@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mojaForma{
+    background-color: white;
+}
+.containera {
+    padding: 2em;
+    background-color: white;
+    margin-left: 40em;
+}
+.myLine {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 2em;
+    width: 38em ;
+}
+.myimput {
+    width: 50%;
+    color: black;
+    padding: 1.5em;
+    margin: 2em 0 2em 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+  
+.myimput:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.registerbtn {
+    background-color: #1876f2;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+  
+.registerbtn:hover {
+    opacity: 1;
+}
+.bold{
+    color: black;
+    display: flex;
+}
+.myProfileNaslov{
+    color: black;
+    margin-left: -18em;
+}

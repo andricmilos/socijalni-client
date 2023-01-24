@@ -1,4 +1,5 @@
 import "../styles/HomePage.css"
+import { Link, useLocation } from 'react-router-dom';
 
 export default function HomePage(){
     return(<>
@@ -13,13 +14,14 @@ export default function HomePage(){
                         <input type="text" placeholder="Search" />
                     </div>
                 </div>
+                <button className="logout"><Link to='/logout'>Logout</Link></button>
             </nav>
 
             <div className="container2">
                 <div className="left-sidebar">
                     <div className="imp-links">
                         <a href="#"><img src="../assets/news.png" />Posts</a>
-                        <a href="#"><img src="../assets/friends.png" />My profile</a>
+                        <a href="/myprofile"><img src="../assets/friends.png" />My profile</a>
                         <a href="#"><img src="../assets/group.png" />Group</a>
                     </div>
                     <div className="shortcut-links">

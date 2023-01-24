@@ -11,6 +11,7 @@ import ResetPassword from './components/ResetPassword';
 import ConfirmResetPassword from './components/ConfirmResetPassword'
 import ConfirmRegistration from './components/ConfirmRegistration';
 import HomePage from './components/HomePage';
+import MyProfile from './components/MyProfile';
 
 function App() {
   return (<>
@@ -21,7 +22,8 @@ function App() {
               <Navigation />
               <PocetnaStranica />
             </>} />
-            <Route path="/log" element={<HomePage />}></Route>
+          <Route path="/log" element={<HomePage />}></Route>
+          <Route path="/myprofile" element={<MyProfile />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>

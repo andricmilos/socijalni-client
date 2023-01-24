@@ -1,6 +1,22 @@
 import "../styles/Login.css"
 import {Link} from "react-router-dom"
+import requestLogin from "../RequestLogin"
 export default function Login(){
+
+    var postValue = { "username": "", "password": "" }
+
+    const usernameChangeValue = (event) => {
+        postValue["username"] = event.target.value
+    }
+
+    const passwordChangeValue = (event) => {
+        postValue["password"] = event.target.value
+    }
+
+    function Klik() {
+        requestLogin(postValue["username"],postValue["password"])
+    }
+
     return(<>
         <div className="pozadina">
             <img src="../assets/pozadinaNova.png" alt="" />
@@ -16,7 +32,7 @@ export default function Login(){
             <div className="sign-in-basic">
                 <div className="landing-form-row">
                     <div className="input-wrapper">
-                        <input type="text" name="username" placeholder="Username or email"  />
+                        <input type="text" name="username" placeholder="Username or email" onChange={usernameChangeValue} />
                         <div className="input-pre">
                             <img src="../assets/account.png" alt="" />
                         </div>
@@ -26,7 +42,7 @@ export default function Login(){
             <div className="sign-in-basic">
                 <div className="landing-form-row">
                     <div className="input-wrapper">
-                        <input type="password" name="password" placeholder="Password"  />
+                        <input type="password" name="password" placeholder="Password" onChange={passwordChangeValue} />
                         <div className="input-pre">
                             <img src="../assets/key.png" alt="" />
                         </div>

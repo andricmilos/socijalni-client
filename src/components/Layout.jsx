@@ -5,7 +5,20 @@ import { useLocation } from 'react-router-dom';
 
 const Layout = () => {
     const location = useLocation();
-    if (location.pathname != '/login') {
+    var provera=true
+    if(location.pathname == '/SignUp')
+    {
+        provera=false
+    }
+    if(location.pathname == '/')
+    {
+        provera=false
+    }
+    if(location.pathname == '/logout')
+    {
+        provera=false
+    }
+    if (location.pathname != '/login' && provera) {
         validateLogin();
     }
     return (<>
