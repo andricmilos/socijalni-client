@@ -12,6 +12,7 @@ import ConfirmResetPassword from './components/ConfirmResetPassword'
 import ConfirmRegistration from './components/ConfirmRegistration';
 import HomePage from './components/HomePage';
 import MyProfile from './components/MyProfile';
+import EditProfile from './components/EditProfile';
 
 function App() {
   return (<>
@@ -24,6 +25,7 @@ function App() {
             </>} />
           <Route path="/log" element={<HomePage />}></Route>
           <Route path="/myprofile" element={<MyProfile />}></Route>
+          <Route path="/editProfile" element={<EditProfile />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>

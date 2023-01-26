@@ -1,7 +1,7 @@
 import "../styles/MyProfile.css"
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from "./Navbar";
+import { useNavigate } from 'react-router-dom';
 
 export default function MyProfile() {
   var myError = JSON.parse("{\"id\":-1,\"email\":\"Error...\",\"ime\":\"Error...\",\"prezime\":\"Error...\",\"username\":\"Error...\",\"datum_rodjenja\":\"Error...\",\"datum_pravljenja_naloga\":\"Error...\",\"aktiviran\":\"true\"}")
@@ -27,6 +27,8 @@ export default function MyProfile() {
         console.error(error)
       })
   }, []);
+
+  const navigate = useNavigate();
 
   return (<>
     <div className="glavni">
@@ -68,7 +70,10 @@ export default function MyProfile() {
             <hr className="myLine" />
           </form>
         </div>
-        <div className="right-sidebar"></div>
+        <div className="right-sidebar">
+          <button className="registerbtn" onClick={() => { navigate("/editProfile", { state: { vrednosti: podaci } }) }}><b>Edit Profile</b></button><br />
+          <button className="registerbtn"><b>Change Password</b></button>
+        </div>
       </div>
     </div>
   </>)
