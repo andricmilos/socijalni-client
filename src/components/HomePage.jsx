@@ -1,26 +1,15 @@
 import "../styles/HomePage.css"
+import Navbar from "./Navbar";
 import { Link, useLocation } from 'react-router-dom';
 
-export default function HomePage(){
-    return(<>
-    <div className="glavni">
-            <nav>
-                <div className="nav-left">
-                    <img src="../assets/logo.png" className="logo" />
-                </div>
-                <div className="nav-right">
-                    <div className="search-box">
-                        <img src="../assets/search.png" />
-                        <input type="text" placeholder="Search" />
-                    </div>
-                </div>
-                <button className="logout"><Link to='/logout'>Logout</Link></button>
-            </nav>
-
+export default function HomePage() {
+    return (<>
+        <div className="glavni">
+            <Navbar />
             <div className="container2">
                 <div className="left-sidebar">
                     <div className="imp-links">
-                        <a href="#"><img src="../assets/news.png" />Posts</a>
+                        <a href="/log" className="chosen"><img src="../assets/news.png" />Posts</a>
                         <a href="/myprofile"><img src="../assets/friends.png" />My profile</a>
                         <a href="#"><img src="../assets/group.png" />Group</a>
                     </div>
@@ -41,7 +30,7 @@ export default function HomePage(){
                             </div>
                         </div>
                         <div className="post-input-container">
-                        <textarea rows="7" placeholder="What's on your mind, Jhon?"></textarea>
+                            <textarea rows="7" placeholder="What's on your mind, Jhon?"></textarea>
                         </div>
                     </div>
 
@@ -53,8 +42,8 @@ export default function HomePage(){
                             </div>
                         </div>
                         <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                        Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-1.png" className="post-img"/>
+                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
+                        <img src="../assets/feed-image-1.png" className="post-img" />
                     </div>
 
                     <div className="post-container">
@@ -65,8 +54,8 @@ export default function HomePage(){
                             </div>
                         </div>
                         <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                        Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-2.png" className="post-img"/>
+                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
+                        <img src="../assets/feed-image-2.png" className="post-img" />
                     </div>
 
                     <div className="post-container">
@@ -77,8 +66,8 @@ export default function HomePage(){
                             </div>
                         </div>
                         <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                        Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-3.png" className="post-img"/>
+                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
+                        <img src="../assets/feed-image-3.png" className="post-img" />
                     </div>
                 </div>
                 <div className="right-sidebar"></div>

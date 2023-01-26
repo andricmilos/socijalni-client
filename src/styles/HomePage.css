@@ -69,7 +69,6 @@ nav{
     margin-top: 4em;
 }
 .glavni{
-    height: 100vh;
     background-color: #efefef;
 }
 .imp-links a, .shortcut-links a{
@@ -84,7 +83,7 @@ nav{
     width: 2em;
     margin-right: 1em;
 }
-.imp-links a:last-child{
+.imp-links .chosen{
     color: #1876f2;
 }
 .imp-links{
@@ -129,16 +128,16 @@ nav{
     margin-right: 1em;
 }
 .write-post-container{
-    width: 100%;
+    width: 96%;
     background: #fff;
     border-radius: 1em;
     padding: 20px;
     color: #626262;
 }
 .post-container{
-    width: 100%;
+    width: 93%;
     background: #fff;
-    border-radius: 6px;
+    border-radius: 1em;
     padding: 2em;
     color: #626262;
     margin: 20px 0;
@@ -181,7 +180,11 @@ nav{
     background-color: #1876f2;
     color: white;
     border: 0.1em solid white;
+    border-radius: 0.8em;
     cursor: pointer;
-    padding: 0.5em;
+    padding: 0.6em;
     font-size: 1.2em;
+}
+.noUnderline{
+    text-decoration: none;
 }
