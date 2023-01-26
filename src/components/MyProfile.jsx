@@ -72,7 +72,7 @@ export default function MyProfile() {
         </div>
         <div className="right-sidebar">
           <button className="registerbtn" onClick={() => { navigate("/editProfile", { state: { vrednosti: podaci } }) }}><b>Edit Profile</b></button><br />
-          <button className="registerbtn"><b>Change Password</b></button>
+          <button className="registerbtn" onClick={() => { navigate("/editPassword", { state: { vrednosti: podaci } }) }}><b>Change Password</b></button>
         </div>
       </div>
     </div>
