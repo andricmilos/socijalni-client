@@ -2,10 +2,28 @@ import "../styles/HomePage.css"
 import Navbar from "./Navbar";
 import { Link, useLocation } from 'react-router-dom';
 import Table from "../Table.jsx";
+import requestPost from "../RequestPost";
 
 export default function HomePage() {
 
     var urlPost = "http://localhost:8080/api/post/svi";
+
+
+    var post = { "naslov": "", "tekst": "", "lajkovi": 0, "datum_postavljanja": "" }
+
+    const naslovChange = (event) => {
+        post["naslov"] = event.target.value
+    }
+
+    const tekstChange = (event) => {
+        post["tekst"] = event.target.value
+    }
+
+    function Klik() {
+        post["datum_postavljanja"] = new Date().toLocaleString()
+        var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&lajkovi=" + post['lajkovi'] + "&datum_postavljanja=" + post['datum_postavljanja'];
+        requestPost('http://localhost:8080/api/post/add', vrednost)
+    }
 
     return (<>
         <div className="glavni">
@@ -27,17 +45,15 @@ export default function HomePage() {
                 </div>
                 <div className="main-content">
                     <div className="write-post-container">
-                        <div className="user-profile">
-                            <div>
-                                <p>Jhon Nicholson</p>
-                                <small>Public</small>
-                            </div>
-                        </div>
-                        <div className="post-input-container">
-                            <textarea rows="7" placeholder="What's on your mind, Jhon?"></textarea>
-                        </div>
-                    </div>
+                        <label>Naslov</label>
+                        <input type="text" name="naslov" onChange={naslovChange} />
 
+                        <label>Tekst</label>
+                        <input type="text" name="tekst" onChange={tekstChange} />
+
+                        <button type='button' onClick={() => { Klik() }}>Create</button>
+                    </div>
+                    <h1 className="headline">Post</h1>
                     <Table url={urlPost} />
                 </div>
                 <div className="right-sidebar"></div>

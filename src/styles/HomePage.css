@@ -188,3 +188,7 @@ nav{
 .noUnderline{
     text-decoration: none;
 }
+.headline{
+    color: black;
+    padding-top: 1em;
+}

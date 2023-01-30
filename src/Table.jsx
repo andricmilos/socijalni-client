@@ -31,9 +31,8 @@ export default function Table({ url }) {
         <>
 
             {tbodyData.map((key, index) => {
-                console.log(key)
                 return (
-                    <div className="post-container">
+                    <div className="post-container" key={key.id}>
                         <div className="user-profile">
                             <div>
                                 <p>{key.naslov}</p>
