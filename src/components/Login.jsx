@@ -47,7 +47,6 @@ export default function Login() {
                                 <img src="../assets/key.png" alt="" />
                             </div>
                         </div>
-                        <div className="text-button" tabIndex={3}>Forgotten your password?</div>
                     </div>
                     <div className="landing-form-actions">
                         <button className="btn-medium" tabIndex={4} type="submit">Login</button>

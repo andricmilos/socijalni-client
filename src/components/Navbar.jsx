@@ -7,12 +7,6 @@ export default function Navbar() {
             <div className="nav-left">
                 <img src="../assets/logo.png" className="logo" />
             </div>
-            <div className="nav-right">
-                <div className="search-box">
-                    <img src="../assets/search.png" />
-                    <input type="text" placeholder="Search" />
-                </div>
-            </div>
             <button className="logout"><Link className="noUnderline" to='/logout'>Logout</Link></button>
         </nav>
     </>)

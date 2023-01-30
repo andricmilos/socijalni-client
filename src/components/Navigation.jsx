@@ -19,7 +19,6 @@ export default function NavigationMenu(){
                 <h2>IT-gram</h2>
             </div>
             <div className="div2">
-                <Link to="FAQ">FAQs</Link>
                 <Link to="login">Login</Link>
                 <Link to="SignUp">Sign up</Link>
             </div>

@@ -7,9 +7,6 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Logout from './components/Logout'
 import NeocekivanaGreska from './components/NeocekivanaGreska';
-import ResetPassword from './components/ResetPassword';
-import ConfirmResetPassword from './components/ConfirmResetPassword'
-import ConfirmRegistration from './components/ConfirmRegistration';
 import HomePage from './components/HomePage';
 import MyProfile from './components/MyProfile';
 import EditProfile from './components/EditProfile';
@@ -32,9 +29,6 @@ function App() {
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>
           <Route path="/error" element={<NeocekivanaGreska />}></Route>
-          <Route path="/resetpassword" element={<ResetPassword />}></Route>
-          <Route path="/confirmresetpassword" element={<ConfirmResetPassword />}></Route>
-          <Route path="/confirmregistration" element={<ConfirmRegistration />}></Route>
         </Route>
         </Routes>
       </BrowserRouter>

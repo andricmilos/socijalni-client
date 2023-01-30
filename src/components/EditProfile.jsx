@@ -2,6 +2,7 @@ import "../styles/MyProfile.css"
 import { useLocation } from 'react-router-dom';
 import Navbar from "./Navbar"
 import requestPost from '../RequestPost';
+import LeftSide from "../LeftSide";
 
 export default function EditProfile() {
     const location = useLocation();
@@ -46,20 +47,7 @@ export default function EditProfile() {
         <div className="glavni">
       <Navbar />
       <div className="container2">
-        <div className="left-sidebar">
-          <div className="imp-links">
-            <a href="/log"><img src="../assets/news.png" />Posts</a>
-            <a href="/myprofile" className="chosen"><img src="../assets/friends.png" />My profile</a>
-            <a href="#"><img src="../assets/group.png" />Group</a>
-          </div>
-          <div className="shortcut-links">
-            <p>Your Shortcuts</p>
-            <a href="#"><img src="../assets/shortcut-1.png" />Java Developers</a>
-            <a href="#"><img src="../assets/shortcut-2.png" />C# Developers</a>
-            <a href="#"><img src="../assets/shortcut-3.png" />Frontend Developers</a>
-            <a href="#"><img src="../assets/shortcut-4.png" />Full Stack Developers</a>
-          </div>
-        </div>
+        <LeftSide odakle="myprofile"/>
         <div className="main-content2">
           <form className="write-post-container2">
             <h1 className="myProfileNaslov">Edit Profile</h1>
