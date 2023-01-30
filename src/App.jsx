@@ -11,6 +11,7 @@ import HomePage from './components/HomePage';
 import MyProfile from './components/MyProfile';
 import EditProfile from './components/EditProfile';
 import EditPassword from './components/EditPassword';
+import Groups from './components/Groups';
 
 function App() {
   return (<>
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/SignUp" element={<SignUp />}></Route>
+          <Route path="/groups" element={<Groups />}></Route>
           <Route path="/error" element={<NeocekivanaGreska />}></Route>
         </Route>
         </Routes>
