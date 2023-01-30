@@ -1,8 +1,12 @@
 import "../styles/HomePage.css"
 import Navbar from "./Navbar";
 import { Link, useLocation } from 'react-router-dom';
+import Table from "../Table.jsx";
 
 export default function HomePage() {
+
+    var urlPost = "http://localhost:8080/api/post/svi";
+
     return (<>
         <div className="glavni">
             <Navbar />
@@ -34,41 +38,7 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    <div className="post-container">
-                        <div className="user-profile">
-                            <div>
-                                <p>Lazar Lakic</p>
-                                <span>Januar 20 2023, 18:45 pm</span>
-                            </div>
-                        </div>
-                        <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-1.png" className="post-img" />
-                    </div>
-
-                    <div className="post-container">
-                        <div className="user-profile">
-                            <div>
-                                <p>Petar Petrovic</p>
-                                <span>Januar 20 2023, 18:45 pm</span>
-                            </div>
-                        </div>
-                        <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-2.png" className="post-img" />
-                    </div>
-
-                    <div className="post-container">
-                        <div className="user-profile">
-                            <div>
-                                <p>Mikica Mikic</p>
-                                <span>Januar 20 2023, 18:45 pm</span>
-                            </div>
-                        </div>
-                        <p className="post-text">Lorem ipsum dolor sit amet, <span> consectetur adipisicing </span> elit. Saepe facere et, hic fuga possimus cumque reiciendis doloribus quasi fugiat, placeat magnam quas vitae laborum praesentium voluptates harum mollitia quidem ullam.
-                            Aliquam, porro. Odio voluptate ad harum praesentium eius sint quas velit voluptas expedita suscipit, perferendis vero quod deleniti, nam, animi adipisci. At repellat pariatur mollitia? Laborum asperiores perferendis explicabo dolor.</p>
-                        <img src="../assets/feed-image-3.png" className="post-img" />
-                    </div>
+                    <Table url={urlPost} />
                 </div>
                 <div className="right-sidebar"></div>
             </div>
