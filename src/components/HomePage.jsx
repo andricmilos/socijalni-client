@@ -29,18 +29,18 @@ export default function HomePage() {
         <div className="glavni">
             <Navbar />
             <div className="container2">
-            <LeftSide odakle="homepage"/>
+                <LeftSide odakle="homepage" />
                 <div className="main-content">
                     <div className="write-post-container">
-                        <label>Naslov</label>
-                        <input type="text" name="naslov" onChange={naslovChange} />
+                        <label className="labels">Naslov</label><br />
+                        <textarea type="text" name="naslov" className="text-input" onChange={naslovChange} /><br />
 
-                        <label>Tekst</label>
-                        <input type="text" name="tekst" onChange={tekstChange} />
+                        <label className="labels">Tekst</label><br />
+                        <textarea type="text" name="tekst" className="text-input" onChange={tekstChange} /><br />
 
-                        <button type='button' onClick={() => { Klik() }}>Create</button>
+                        <button type='button' className="button-create" onClick={() => { Klik() }}>Publish it</button>
                     </div>
-                    <h1 className="headline">Post</h1>
+                    <h1 className="headline">POSTS</h1>
                     <Table url={urlPost} />
                 </div>
                 <div className="right-sidebar"></div>
