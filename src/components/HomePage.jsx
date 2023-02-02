@@ -38,7 +38,7 @@ export default function HomePage() {
                         <label className="labels">Tekst</label><br />
                         <textarea type="text" name="tekst" className="text-input" onChange={tekstChange} /><br />
 
-                        <button type='button' className="button-create" onClick={() => { Klik() }}>Publish it</button>
+                        <button type='button' className="button-create" onClick={() => { Klik() }}>Publish</button>
                     </div>
                     <h1 className="headline">POSTS</h1>
                     <Table url={urlPost} />
