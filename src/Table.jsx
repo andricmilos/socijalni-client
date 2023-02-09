@@ -80,7 +80,7 @@ export default function Table({ url }) {
                                 <span>{ulepsajDatum(key.datum_postavljanja)}</span>
                             </div>
                         </div>
-                        <p className="post-text">{key.tekst}</p><h3>{key.grupe}</h3>
+                        <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3>
                     </div>
                 );
             })}

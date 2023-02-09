@@ -44,8 +44,8 @@ export default function HomePage() {
                         <label className="labels">Tekst</label><br />
                         <textarea type="text" name="tekst" className="text-input" onChange={tekstChange} /><br />
 
-                        <label>Grupe</label>
-                        <select name="grupe" onChange={grupeChange}>
+                        <label className="labels">Odaberite grupu:</label><br /><br />
+                        <select name="grupe" className="title" onChange={grupeChange}>
                             <Options url={urlGroup} />
                         </select>
 

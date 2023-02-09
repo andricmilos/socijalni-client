@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../src/styles/GrupeKorisnika.css"
 export default function GrupeKorisnika() {
   var urlGroup = "http://localhost:8080/api/group/svi";
 
@@ -27,7 +28,7 @@ export default function GrupeKorisnika() {
 
                       if (listaaa.includes(key.id.toString())) {
 
-                        resenje += '<li style="color: black;">' + key.ime + '</li>';
+                        resenje += '<li>' + key.ime + '</li>';
 
                       }
 
@@ -35,7 +36,7 @@ export default function GrupeKorisnika() {
 
                     document.getElementById("nesto").innerHTML = resenje
                   } else {
-                    document.getElementById("nesto").innerHTML = '<li style="color: black;" >Nemate grupe</li>';
+                    document.getElementById("nesto").innerHTML = '<li>Nemate grupe</li>';
                   }
                 }
               })

@@ -27,7 +27,7 @@ export default function Options({ url, dv }) {
 
             {tbodyData.map((key, index) => {
                 return (
-                    <option key={key.id} selected={dv == key.id} value={key.id}>{key.ime}</option>
+                    <option style={{color:"black"}} key={key.id} selected={dv == key.id} value={key.id}>{key.ime}</option>
                 );
             })}
 
