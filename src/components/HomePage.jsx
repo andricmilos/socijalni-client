@@ -3,13 +3,15 @@ import Navbar from "./Navbar";
 import Table from "../Table.jsx";
 import requestPost from "../RequestPost";
 import LeftSide from "../LeftSide";
+import Options from "../Options";
 
 export default function HomePage() {
 
     var urlPost = "http://localhost:8080/api/post/svi";
+    var urlGroup = "http://localhost:8080/api/group/svi";
 
 
-    var post = { "naslov": "", "tekst": "", "lajkovi": 0, "datum_postavljanja": "" }
+    var post = { "naslov": "", "tekst": "", "grupe": "", "datum_postavljanja": "" }
 
     const naslovChange = (event) => {
         post["naslov"] = event.target.value
@@ -19,9 +21,13 @@ export default function HomePage() {
         post["tekst"] = event.target.value
     }
 
+    const grupeChange = (event) => {
+        post["grupe"] = event.target.value
+    }
+
     function Klik() {
         post["datum_postavljanja"] = new Date().toLocaleString()
-        var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&lajkovi=" + post['lajkovi'] + "&datum_postavljanja=" + post['datum_postavljanja'];
+        var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&grupe=" + post['grupe'] + "&datum_postavljanja=" + post['datum_postavljanja'];
         requestPost('http://localhost:8080/api/post/add', vrednost)
     }
 
@@ -37,6 +43,11 @@ export default function HomePage() {
 
                         <label className="labels">Tekst</label><br />
                         <textarea type="text" name="tekst" className="text-input" onChange={tekstChange} /><br />
+
+                        <label>Grupe</label>
+                        <select name="grupe" onChange={grupeChange}>
+                            <Options url={urlGroup} />
+                        </select>
 
                         <button type='button' className="button-create" onClick={() => { Klik() }}>Publish</button>
                     </div>

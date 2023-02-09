@@ -1,3 +1,5 @@
+import GrupeKorisnika from "./GrupeKorisnika";
+
 export default function LeftSide({ odakle }) {
     var profile = false
     var posts = false
@@ -22,10 +24,7 @@ export default function LeftSide({ odakle }) {
             </div>
             <div className="shortcut-links">
                 <p>Your Groups</p>
-                <a href="#"><img src="../assets/shortcut-1.png" />Java Developers</a>
-                <a href="#"><img src="../assets/shortcut-2.png" />C# Developers</a>
-                <a href="#"><img src="../assets/shortcut-3.png" />Frontend Developers</a>
-                <a href="#"><img src="../assets/shortcut-4.png" />Full Stack Developers</a>
+                <GrupeKorisnika />
             </div>
         </div>
     )
