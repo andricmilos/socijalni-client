@@ -1,4 +1,3 @@
-import "../styles/SignUp.css"
 import requestPost from '../RequestPost';
 
 export default function Login(){

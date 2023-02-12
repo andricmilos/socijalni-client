@@ -7,6 +7,8 @@ function ulepsajDatum(string) {
 
 export default function Table({ url }) {
 
+    var urlGroup = "http://localhost:8080/api/group/svi";
+
     const [podaci, setPodaci] = useState([{ "loading": "Loading" }]);
     var tbodyData = podaci
 
@@ -18,7 +20,46 @@ export default function Table({ url }) {
                     setPodaci([{ "no value": "No data" }])
                 }
                 else {
-                    setPodaci(jsonData)
+                    // setPodaci(jsonData)
+
+
+                    fetch(urlGroup, { mode: 'cors', credentials: 'include' })
+                        .then(response => response.json())
+                        .then((jsonData2) => {
+                            if (jsonData2[0] != null) {
+                                var count = Object.keys(jsonData).length;
+
+                                for (var i = 0; i < count; i++) {
+
+
+                                    if (jsonData[i].grupe != null) {
+                                        var listaaa = jsonData[i].grupe.split(",")
+                                        var nePostoji = true
+
+                                        jsonData2.map((key, index) => {
+
+                                            if (listaaa.includes(key.id.toString())) {
+
+                                                jsonData[i].grupe = key.ime;
+                                                nePostoji = false
+                                            }
+
+                                        })
+
+                                        if (nePostoji) {
+                                            jsonData[i].grupe = "";
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+                            setPodaci(jsonData)
+                        })
+                        .catch((error) => {
+                            console.error(error)
+                        })
                 }
             })
             .catch((error) => {
@@ -39,7 +80,7 @@ export default function Table({ url }) {
                                 <span>{ulepsajDatum(key.datum_postavljanja)}</span>
                             </div>
                         </div>
-                        <p className="post-text">{key.tekst}</p>
+                        <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3>
                     </div>
                 );
             })}

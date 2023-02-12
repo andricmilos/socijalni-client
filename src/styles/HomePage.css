@@ -256,3 +256,10 @@ nav {
     width: 55em;
     height: 10em;
 }
+.title{
+    color: black;
+    font-size: 1em;
+}
+h3{
+    color: black;
+}
