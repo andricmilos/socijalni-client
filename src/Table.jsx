@@ -7,6 +7,8 @@ function ulepsajDatum(string) {
 
 export default function Table({ url }) {
 
+    var urlGroup = "http://localhost:8080/api/group/svi";
+
     const [podaci, setPodaci] = useState([{ "loading": "Loading" }]);
     var tbodyData = podaci
 
@@ -78,7 +80,7 @@ export default function Table({ url }) {
                                 <span>{ulepsajDatum(key.datum_postavljanja)}</span>
                             </div>
                         </div>
-                        <p className="post-text">{key.tekst}</p>
+                        <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3>
                     </div>
                 );
             })}

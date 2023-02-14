@@ -5,6 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import LeftSide from "../LeftSide";
 
 export default function MyProfile() {
+
+  var urlGroup = "http://localhost:8080/api/group/svi";
+
+  var finale = "Loading...";
   var myError = JSON.parse("{\"id\":-1,\"email\":\"Error...\",\"ime\":\"Error...\",\"prezime\":\"Error...\",\"username\":\"Error...\",\"datum_rodjenja\":\"Error...\",\"datum_pravljenja_naloga\":\"Error...\",\"aktiviran\":\"true\"}")
   const [podaci, setPodaci] = useState(JSON.parse("{\"id\":-1,\"email\":\"Loading...\",\"ime\":\"Loading...\",\"prezime\":\"Loading...\",\"username\":\"Loading...\",\"datum_rodjenja\":\"Loading...\",\"datum_pravljenja_naloga\":\"Loading...\",\"aktiviran\":\"true\"}"));
   useEffect(() => {
@@ -17,7 +21,38 @@ export default function MyProfile() {
             var datum = new Date(Date.parse(jsonData.datum_rodjenja))
             jsonData.datum_rodjenja = datum.toISOString().split('T')[0]
             setPodaci(jsonData)
+
+            fetch(urlGroup, { mode: 'cors', credentials: 'include' })
+              .then(response => response.json())
+              .then((jsonData2) => {
+                finale = ""
+                if (jsonData2[0] != null) {
+
+                  if (jsonData.grupe != null) {
+                    var listaaa = jsonData.grupe.split(",")
+
+                    var pocetak = false;
+                    jsonData2.map((key, index) => {
+
+                      if (listaaa.includes(key.id.toString())) {
+                        if (pocetak) {
+                          finale += ","
+                        }
+                        finale += key.ime;
+
+                        pocetak = true;
+                      }
+
+                    })
+                    document.getElementById("gupeId").value = finale
+                  }
+                }
+              })
+              .catch((error) => {
+                console.error(error)
+              })
           })
+
           .catch((error) => {
             setPodaci(myError);
             console.error(error)
@@ -29,13 +64,16 @@ export default function MyProfile() {
       })
   }, []);
 
+
+
+
   const navigate = useNavigate();
 
   return (<>
     <div className="glavni">
       <Navbar />
       <div className="container2">
-        <LeftSide odakle="myprofile"/>
+        <LeftSide odakle="myprofile" />
         <div className="main-content2">
           <form className="write-post-container2">
             <h1 className="myProfileNaslov">My Profile</h1>
@@ -55,6 +93,9 @@ export default function MyProfile() {
 
             <label><b className="bold">Datum rodjenja</b></label>
             <input type="date" className="myimput" value={podaci.datum_rodjenja} readOnly={true} />
+
+            <label><b className="bold">Grupe u kojima se nalazite</b></label>
+            <input type="text" className="myimput" id="gupeId" readOnly={true} />
             <hr className="myLine" />
           </form>
         </div>
