@@ -23,6 +23,7 @@ function App() {
               <PocetnaStranica />
             </>} />
           <Route path="/log" element={<HomePage />}></Route>
+          <Route path="/log/:id" element={<HomePage />}></Route>
           <Route path="/myprofile" element={<MyProfile />}></Route>
           <Route path="/editProfile" element={<EditProfile />}></Route>
           <Route path="/editPassword" element={<EditPassword />}></Route>

@@ -3,7 +3,6 @@ import "../src/styles/GrupeKorisnika.css"
 export default function GrupeKorisnika() {
   var urlGroup = "http://localhost:8080/api/group/svi";
 
-
   const [podaci, setPodaci] = useState([{ "loading": "Loading" }]);
   var tbodyData = podaci
   useEffect(() => {
@@ -25,18 +24,14 @@ export default function GrupeKorisnika() {
                     var resenje = "";
 
                     jsonData2.map((key, index) => {
-
                       if (listaaa.includes(key.id.toString())) {
-
-                        resenje += '<li>' + key.ime + '</li>';
-
+                        resenje += '<a href="/log/' + key.id.toString() + '">' + key.ime + '</a>';
                       }
-
                     })
 
                     document.getElementById("nesto").innerHTML = resenje
                   } else {
-                    document.getElementById("nesto").innerHTML = '<li>Nemate grupe</li>';
+                    document.getElementById("nesto").innerHTML = '<a>Nemate grupe</a>';
                   }
                 }
               })
@@ -44,8 +39,6 @@ export default function GrupeKorisnika() {
                 console.error(error)
               })
           })
-
-
           .catch((error) => {
             setPodaci("nista")
             console.error(error)

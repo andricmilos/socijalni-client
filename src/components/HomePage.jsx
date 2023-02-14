@@ -4,10 +4,15 @@ import Table from "../Table.jsx";
 import requestPost from "../RequestPost";
 import LeftSide from "../LeftSide";
 import Options from "../Options";
+import { useParams } from 'react-router-dom';
 
 export default function HomePage() {
 
+    const { id } = useParams()
     var urlPost = "http://localhost:8080/api/post/svi";
+    if (id != null) {
+        urlPost = "http://localhost:8080/api/post/from/group/" + id;
+    }
     var urlGroup = "http://localhost:8080/api/group/svi";
 
 
