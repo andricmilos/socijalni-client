@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CommentTable from './CommentTable';
 import requestPost from "./RequestPost";
 
 function ulepsajDatum(string) {
@@ -71,8 +72,8 @@ export default function Table({ url }) {
         fetch('http://localhost:8080/api/user/ulogovani', { mode: 'cors', credentials: 'include' })
             .then(response => response.json())
             .then((jsonData) => {
-                var vrednost = "?userId=" + jsonData.ID + "&postId=" + pid + "&sadrzaj=" + sadrzaj;
-                requestPost('http://localhost:8080/api/comment/add', vrednost)
+                var vrednost = "?userId=" + jsonData.ID + "&postId=" + pid + "&sadrzaj=" + sadrzaj+ "&datum_postavljanja=" +  new Date().toLocaleString();
+                requestPost('http://localhost:8080/api/comment/add', vrednost,"Comment")
             })
             .catch((error) => {
                 setPodaci(myError);
@@ -93,7 +94,8 @@ export default function Table({ url }) {
                             </div>
                         </div>
                         <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3><br />
-                        <label className="labels">Komentar</label><br />
+                        <CommentTable url={"http://localhost:8080/api/comment/from/"+key.id}/>
+                        <label className="labels">Dodaj komentar</label><br />
                         <textarea type="text" id={key.id + "-com"} className="text-input" /><br />
                         <button type='button' className="button-create" onClick={() => { Klik(key.id, document.getElementById(key.id + "-com").value) }}>Add</button>
                     </div>

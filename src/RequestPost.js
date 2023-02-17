@@ -19,6 +19,10 @@ export default function requestPost(url, json, signature) {
       alert(response.data);
       window.location.href = "/groups";
     }
+    else if(signature=="Comment"){
+      alert(response.data);
+      window.location.href="/log";
+    }
     else {
       alert(response.data);
     }
