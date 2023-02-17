@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import requestPost from './RequestPost';
+import "../src/styles/GrupeTable.css"
 
 
 export default function GrupeTable({ url }) {
@@ -42,8 +43,10 @@ export default function GrupeTable({ url }) {
                             <div>
                                 <p>{key.ime}</p>
                             </div>
-                            <p onClick={() => { Sub(key.id); }}>Subscribe</p>
-                            <p onClick={() => { Unsub(key.id); }}>Unsubscribe</p>
+                            <div className='div-btn-sub'>
+                                <button className='btn-sub' onClick={() => { Sub(key.id); }}>Subscribe</button>
+                                <button className='btn-unsub' onClick={() => { Unsub(key.id); }}>Unsubscribe</button>
+                            </div>
                         </div>
                         <p className="post-text">{key.opis}</p>
                     </div>

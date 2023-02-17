@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import requestPost from "./RequestPost";
 
 function ulepsajDatum(string) {
     var novi = new Date(string);
@@ -51,9 +52,7 @@ export default function Table({ url }) {
                                         }
 
                                     }
-
                                 }
-
                             }
                             setPodaci(jsonData)
                         })
@@ -68,6 +67,19 @@ export default function Table({ url }) {
             })
     }, []);
 
+    function Klik(pid, sadrzaj) {
+        fetch('http://localhost:8080/api/user/ulogovani', { mode: 'cors', credentials: 'include' })
+            .then(response => response.json())
+            .then((jsonData) => {
+                var vrednost = "?userId=" + jsonData.ID + "&postId=" + pid + "&sadrzaj=" + sadrzaj;
+                requestPost('http://localhost:8080/api/comment/add', vrednost)
+            })
+            .catch((error) => {
+                setPodaci(myError);
+                console.error(error)
+            })
+    }
+
     return (
         <>
 
@@ -80,7 +92,10 @@ export default function Table({ url }) {
                                 <span>{ulepsajDatum(key.datum_postavljanja)}</span>
                             </div>
                         </div>
-                        <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3>
+                        <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3><br />
+                        <label className="labels">Komentar</label><br />
+                        <textarea type="text" id={key.id + "-com"} className="text-input" /><br />
+                        <button type='button' className="button-create" onClick={() => { Klik(key.id, document.getElementById(key.id + "-com").value) }}>Add</button>
                     </div>
                 );
             })}

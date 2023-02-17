@@ -1,0 +1,23 @@
+.btn-sub{
+    color: white;
+    border: none;
+    background-color: #1876f2;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 3em;
+    margin-right: 5em;
+    cursor: pointer;
+}
+.btn-unsub{
+    border: none;
+    background-color: #1876f2;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 3em;
+    color: white;
+    cursor: pointer;
+}
+.div-btn-sub{
+    display: flex;
+    padding-left: 1em;
+}
