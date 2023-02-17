@@ -25,13 +25,13 @@ export default function GrupeKorisnika() {
 
                     jsonData2.map((key, index) => {
                       if (listaaa.includes(key.id.toString())) {
-                        resenje += '<a href="/log/' + key.id.toString() + '">' + key.ime + '</a>';
+                        resenje += '<a class="uvlacenjeGrupe" href="/log/' + key.id.toString() + '">' + key.ime + '</a>';
                       }
                     })
 
                     document.getElementById("nesto").innerHTML = resenje
                   } else {
-                    document.getElementById("nesto").innerHTML = '<a>Nemate grupe</a>';
+                    document.getElementById("nesto").innerHTML = '<a class="uvlacenjeGrupe">Nemate grupe</a>';
                   }
                 }
               })

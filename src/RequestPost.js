@@ -12,13 +12,15 @@ export default function requestPost(url, json, signature) {
       "Access-Control-Allow-Origin": "*",
     }
   ).then(response => {
-    if(signature=="signup" && response.data=="Uspesno")
-    {
-        window.location.href = "/login";
+    if (signature == "signup" && response.data == "Uspesno") {
+      window.location.href = "/login";
     }
-    else
-    {
-        alert(response.data);
+    else if (signature == "Grupe") {
+      alert(response.data);
+      window.location.href = "/groups";
+    }
+    else {
+      alert(response.data);
     }
   })
     .catch(error => {

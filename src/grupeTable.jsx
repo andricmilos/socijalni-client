@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import requestPost from './RequestPost';
 
 
 export default function GrupeTable({ url }) {
@@ -23,6 +24,14 @@ export default function GrupeTable({ url }) {
             })
     }, []);
 
+    function Sub(vrednost) {
+        requestPost('http://localhost:8080/api/group/subscribe/', vrednost,"Grupe")
+    }
+
+    function Unsub(vrednost) {
+        requestPost('http://localhost:8080/api/group/unsubscribe/', vrednost,"Grupe")
+    }
+
     return (
         <>
 
@@ -33,6 +42,8 @@ export default function GrupeTable({ url }) {
                             <div>
                                 <p>{key.ime}</p>
                             </div>
+                            <p onClick={() => { Sub(key.id); }}>Subscribe</p>
+                            <p onClick={() => { Unsub(key.id); }}>Unsubscribe</p>
                         </div>
                         <p className="post-text">{key.opis}</p>
                     </div>
