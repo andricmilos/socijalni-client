@@ -43,13 +43,13 @@ export default function HomePage() {
                 <LeftSide odakle="homepage" />
                 <div className="main-content">
                     <div className="write-post-container">
-                        <label className="labels">Naslov</label><br />
+                        <label className="labels">Title</label><br />
                         <textarea type="text" name="naslov" className="text-input" onChange={naslovChange} /><br />
 
-                        <label className="labels">Tekst</label><br />
+                        <label className="labels">Text</label><br />
                         <textarea type="text" name="tekst" className="text-input" onChange={tekstChange} /><br />
 
-                        <label className="labels">Odaberite grupu:</label><br /><br />
+                        <label className="labels">Chose your group:</label><br /><br />
                         <select name="grupe" className="title" onChange={grupeChange}>
                             <Options url={urlGroup} />
                         </select>

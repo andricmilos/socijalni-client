@@ -82,19 +82,19 @@ export default function MyProfile() {
             <label><b className="bold">Email</b></label>
             <input type="email" className="myimput" value={podaci.email} readOnly={true} />
 
-            <label><b className="bold">Ime</b></label>
+            <label><b className="bold">Name</b></label>
             <input type="text" className="myimput" value={podaci.ime} readOnly={true} />
 
-            <label><b className="bold">Prezime</b></label>
+            <label><b className="bold">Surname</b></label>
             <input type="text" className="myimput" value={podaci.prezime} readOnly={true} />
 
             <label><b className="bold">Username</b></label>
             <input type="text" className="myimput" value={podaci.username} readOnly={true} />
 
-            <label><b className="bold">Datum rodjenja</b></label>
+            <label><b className="bold">Date of birth</b></label>
             <input type="date" className="myimput" value={podaci.datum_rodjenja} readOnly={true} />
 
-            <label><b className="bold">Grupe u kojima se nalazite</b></label>
+            <label><b className="bold">Your groups</b></label>
             <input type="text" className="myimput" id="gupeId" readOnly={true} />
             <hr className="myLine" />
           </form>

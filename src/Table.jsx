@@ -95,9 +95,9 @@ export default function Table({ url }) {
                         </div>
                         <p className="post-text">{key.tekst}</p><h3 className="post-text">Grupa: {key.grupe}</h3><br />
                         <CommentTable url={"http://localhost:8080/api/comment/from/"+key.id}/>
-                        <label className="labels">Dodaj komentar</label><br />
+                        <label className="labels">Add comment</label><br />
                         <textarea type="text" id={key.id + "-com"} className="text-input" /><br />
-                        <button type='button' className="button-create" onClick={() => { Klik(key.id, document.getElementById(key.id + "-com").value) }}>Add</button>
+                        <button type='button' className="button-create" onClick={() => { Klik(key.id, document.getElementById(key.id + "-com").value) }}>Comment</button>
                     </div>
                 );
             })}
