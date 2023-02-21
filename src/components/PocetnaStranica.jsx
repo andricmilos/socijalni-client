@@ -26,14 +26,11 @@ export default function PocetnaSaznajVise(){
                     <div className="Spacer"></div>
                     <div className="Text">
                         <h1>Sta je IT-gram?</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex hic atque nobis beatae possimus voluptas! Iusto maiores libero nostrum!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quas quibusdam asperiores consectetur deleniti dolores consequatur fugiat odit doloribus nisi!</p>
+                        <p>IT-gram je platforma koja sluzi da priblizi sve porgramere na jednom mestu. IT-gram je drustvena mreza posvecena iskljucivo programerima odnosno svim IT strucnjacima. Dodji i pridruzi nam se na mestu gde se spajaju svi IT strucnjaci na svetu!</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div><br /><br /><br />
         <div className="div-copy">
             <span className="kraj">
                 &#169;Andric Co. 2022 Copyright

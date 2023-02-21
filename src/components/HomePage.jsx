@@ -32,6 +32,7 @@ export default function HomePage() {
 
     function Klik() {
         post["datum_postavljanja"] = new Date().toLocaleString()
+        post["tekst"] = post["tekst"].replaceAll("\n","%0A")
         var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&grupe=" + post['grupe'] + "&datum_postavljanja=" + post['datum_postavljanja'];
         requestPost('http://localhost:8080/api/post/add', vrednost)
     }

@@ -33,6 +33,10 @@ export default function CommentTable({ url }) {
         <>
 
             {tbodyData.map((key, index) => {
+                if(key.id==null)
+                {
+                    return;
+                }
                 return (
                     <div className="post-container" key={key.id}>
                         <div className="user-profile">
