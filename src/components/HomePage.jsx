@@ -9,14 +9,14 @@ import { useParams } from 'react-router-dom';
 export default function HomePage() {
 
     const { id } = useParams()
-    var urlPost = "http://localhost:8080/api/post/svi";
+    var urlPost = "http://localhost:8080/api/post/svi/";
     if (id != null) {
         urlPost = "http://localhost:8080/api/post/from/group/" + id;
     }
     var urlGroup = "http://localhost:8080/api/group/svi";
 
 
-    var post = { "naslov": "", "tekst": "", "grupe": "", "datum_postavljanja": "" }
+    var post = { "naslov": "", "tekst": "", "grupe": "", "datum_postavljanja": "", "user": "" }
 
     const naslovChange = (event) => {
         post["naslov"] = event.target.value
@@ -31,10 +31,19 @@ export default function HomePage() {
     }
 
     function Klik() {
-        post["datum_postavljanja"] = new Date().toLocaleString()
-        post["tekst"] = post["tekst"].replaceAll("\n","%0A")
-        var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&grupe=" + post['grupe'] + "&datum_postavljanja=" + post['datum_postavljanja'];
-        requestPost('http://localhost:8080/api/post/add', vrednost)
+        fetch('http://localhost:8080/api/user/ulogovani', { mode: 'cors', credentials: 'include' })
+            .then(response => response.json())
+            .then((jsonData) => {
+                post["datum_postavljanja"] = new Date().toLocaleString()
+                post["tekst"] = post["tekst"].replaceAll("\n", "%0A")
+                post["user"] = jsonData.ID;
+                var vrednost = "?naslov=" + post['naslov'] + "&tekst=" + post['tekst'] + "&grupe=" + post['grupe'] + "&datum_postavljanja=" + post['datum_postavljanja'] + "&user=" + post['user'];
+                requestPost('http://localhost:8080/api/post/add', vrednost)
+            })
+            .catch((error) => {
+                setPodaci(myError);
+                console.error(error)
+            })
     }
 
     return (<>
